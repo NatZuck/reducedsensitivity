@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natan Zucchetti | Web design e development</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <section id="home" class="header">
+    <div class="light"></div>
+    <article class="header__titles">
+      <h2 class="header__name" data-aos="fade-down" data-aos-duration="2000">Natan</h2>
+      <h2 class="header__lastname" data-aos="zoom-in" data-aos-duration="2000">Zucchetti</h2>
+    </article>
+
+    <h1 class="header__title">Web Design and <span>Development</span></h1>
+  </section>
+
+  <section id="quote" class="quote">
+    <div class="light"></div>
+    <h3 class="quote__title" data-aos="fade-left" data-aos-duration="2000">"Simplicity is the ultimate
+      <span>sophistication."</span></h3>
+    <img loading="lazy" class="quote__image" data-aos="fade-right" data-aos-duration="2000" src="./img/david-gum.png"
+      alt="david statue image">
+  </section>
+
+  <section id="services" class="services">
+    <div class="light"></div>
+    <article class="services__details">
+      <p class="services__paragraph" data-aos="fade-left" data-aos-duration="2000">Formato come sviluppatore grazie ai
+        corsi di sviluppo web di
+        Harvard, ma cresciuto
+        come designer; offro tre possibilità per la tua azienda:</p>
+      <ul class="services__list" data-aos="fade-left" data-aos-duration="2000">
+        <li>Web design</li>
+        <li>Sviluppo web</li>
+        <li>Full package</li>
+      </ul>
+      <a class="button services__button" href="#contacts">Contattami</a>
+    </article>
+
+    <img loading="lazy" class="services__image" src="./img/harvard.png" data-aos="fade-right" data-aos-duration="2000"
+      alt="harvard logo image">
+  </section>
+
+  <section id="package" class="package">
+    <div class="light"></div>
+    <article class="package__details" data-aos="fade-left" data-aos-duration="2000">
+      <p class="package__title">Il Full Package è la soluzione se non vuoi più doverti preoccupare del tuo sito web,
+        facendolo diventare un asset che porta nuovi clienti.</p>
+      <p class="package__paragraph">Con un pagamento unico più una quota mensile per l’hosting, la tua azienda avrà non
+        soltanto un nuovo e moderno sito web ottimizzato per tutti i dispositivi, ma anche la disponibilità di un
+        fotografo per i media del sito e ottimizzazione SEO garantita.</p>
+    </article>
+
+    <article class="card" data-aos="fade-right" data-aos-duration="2000">
+      <span class="card__title">Full Package</span>
+      <p class="card__paragraph">Web design, development e hosting</p>
+      <a class="card__button" href="#contacts">Contattami</a>
+      <img loading="lazy" class="card__image" src="./img/caesar.png" alt="caesar">
+    </article>
+  </section>
+
+  <section id="slides" class="slides">
+    <div class="light"></div>
+    <p class="slides__paragraph" data-aos="fade-left" data-aos-duration="2000">Ecco cosa dice chi si è già affidato ai
+      <span>miei
+        servizi...</span></p>
+    <article class="slides__container">
+
+      <div class="slides__details">
+        <article class="selected">
+          <div class="selected__circles"></div>
+          <div class="selected__circles"></div>
+          <div class="selected__circles"></div>
+          <div class="selected__circles"></div>
+          <div class="selected__circles"></div>
+        </article>
+        <p class="slides__title">Giudizio assolutamente positivo. Competenza, precisione e velocità nella creazione di
+          siti sono i suoi punti di forza</p>
+        <span class="slides__span">"My Chance"</span>
+        <i class="slides__rightarrow fa-solid fa-chevron-right"></i>
+        <i class="slides__leftarrow fa-solid fa-chevron-left"></i>
+      </div>
+
+      <img data-tilt loading="lazy" class="slides__image"
+        src="./img/works/scu-screen.png" alt="website-image">
+    </article>
+
+  </section>
+
+  <section id="contacts" class="contacts">
+    <span class="contacts__title" data-aos="fade-left" data-aos-duration="2000">Parlami del tuo progetto</span>
+
+    <article class="contacts__container">
+      <article class="contacts__data" data-aos="fade-left" data-aos-duration="2000">
+        <article class="contacts__phone">
+          <span class="contacts__phonetitle">Telefono</span>
+          <span class="contacts__phonenumber">+39 3703453998</span>
+        </article>
+
+        <article class="contacts__email">
+          <span class="contacts__emailtitle">Email</span>
+          <span class="contacts__emaildata">natan@zafir.it</span>
+        </article>
+      </article>
+
+      <article class="contacts__form" data-aos="fade-right" data-aos-duration="2000">
+        <form class="contact-form hidden-right" action="https://formsubmit.co/f9b7e5835b95c3da4beab6d9529b9782"
+          method="POST" autocomplete="off">
+          <input autocomplete="false" name="hidden" type="text" style="display:none;">
+
+          <div class="input-wrapper">
+            <input name="name" class="input-field" placeholder=" " type="text" maxlength="30" id="name" required>
+            <label class="shown-label label" id="name-label" for="name">Nome e cognome</label>
+          </div>
+
+          <div class="input-wrapper">
+            <input name="phone" class="input-field" placeholder=" " type="tel" name="" id="phone" required>
+            <label class="shown-label label" id="phone-label" for="phone">Telefono</label>
+          </div>
+
+          <div class="input-wrapper">
+            <input name="email" class="input-field" placeholder=" " type="email" maxlength="50" name="" id="email">
+            <label class="shown-label label" id="email-label" for="email">Email</label>
+          </div>
+
+          <div class="input-wrapper">
+            <label class="shown-label label" id="budget-label" for="budget">Budget:</label><output
+              id="budget-output">€20000</output>
+            <input name="budget" id="budget" class="input-field" type="range" min="100" max="50000" step="100"
+              value="20000">
+          </div>
+
+          <div class="input-wrapper">
+            <input name="messaggio" class="input-field" maxlenght="250" placeholder=" " type="text" name="" id="message">
+            <label class="shown-label label" id="message-label"  for="message">Messaggio</label>
+          </div>
+
+          <div class="input-wrapper">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://localhost:5173/">
+            <div class="submit-wrapper link">
+              <button class="button">Invia</button>
+            </div>
+          </div>
+
+        </form>
+      </article>
+
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.js" integrity="sha512-Mfa0FGPN33LtU+puEaoEn1kAIFJYm2kMsipPbFefhcqz9lLVzxkN/NDFpaPUdmQuisESKXisMit5UkloQ8OtrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

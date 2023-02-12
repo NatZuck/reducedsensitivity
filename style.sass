@@ -1,0 +1,786 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+html
+    font-size: 14px
+    overflow-x: hidden
+
+body
+    background: #171717
+    overflow-x: hidden
+    font-family: Supreme,sans-serif
+    
+
+.light 
+    width: 200px
+    height: 200px
+    background-color: #f5f5f5
+    opacity: 0.1
+    border-radius: 50%
+    filter: blur(100px)
+    position: absolute
+    z-index: 5
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+
+//  HEADER
+
+.header
+    min-height: 100vh
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &__titles
+        position: relative
+    &__name
+        font-size: 3.25rem
+        color: #f5f5f5
+        animation: go-in-from-below 10s ease
+    &__lastname
+        font-size: 5rem
+        color: transparent
+        -webkit-text-stroke: 2px #f5f5f5
+        font-weight: 900
+        transform-origin: left
+        text-transform: uppercase
+        cursor: pointer
+        animation: zoom-out 4s ease
+        &:hover
+            transform: scale(1.2)
+    &__title
+        color: #a2a2a2
+        font-weight: 400
+        font-size: 1.7rem
+        text-align: right
+        animation: go-in-from-left 10s ease
+        &>span
+            display: block
+
+// QUOTE
+
+.quote
+    position: relative
+    min-height: 100vh
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &__title
+        color: #a2a2a2
+        font-size: 2.5rem
+        font-weight: 300
+        text-align: right
+        animation: go-in-from-right 1s ease
+        min-width: 200px
+        &> span
+            display: block
+    &__image
+        animation: go-in-from-left 1s ease
+
+// SERVICES
+
+.services
+    display: flex
+    justify-content: space-around
+    align-items: center
+    height: 100vh
+    position: relative
+    &__details
+        display: flex
+        flex-direction: column
+        gap: 1rem
+    &__paragraph
+        font-size: 2.3rem
+        color: #f5f5f5
+        max-width: 550px
+    &__list
+        font-size: 1.4rem
+        color: #cfcfcf
+        margin-left: 1.5rem
+    &__image
+        width: 200px
+
+.button
+    position: relative
+    margin-top: 2rem
+    color: #a2a2a2
+    font-size: 2rem
+    text-decoration: none
+    text-align: center
+    width: fit-content
+    margin-left: auto
+    margin-right: auto
+    border: none
+    background: transparent
+    cursor: pointer
+    &::before
+        content: ""
+        width: 40px
+        height: 2px
+        border-radius: 1rem
+        background: #a2a2a2
+        position: absolute
+        bottom: 0
+        left: 100%
+    &:hover
+        &::before
+            width: 100%
+            transition: 1s
+            left: 0
+
+.package
+    position: relative
+    display: flex
+    justify-content: space-around
+    align-items: center
+    min-height: 100vh
+    &__details
+        max-width: 550px
+    &__title
+        color: #f5f5f5
+        font-size: 2.5rem
+    &__paragraph
+        margin-top: 2rem
+        color: #cfcfcf
+        font-size: 1.2rem
+
+.card
+    position: relative
+    background: #0d0d0d
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding: 1.5rem
+    flex-direction: column
+    width: 385px
+    height: 240px
+    border-radius: 1rem
+    overflow: hidden
+    box-shadow: 1px 8px 8px #000
+    &__title
+        text-transform: uppercase
+        color: #f5f5f5
+        font-size: 2rem
+        z-index: 1
+    &__paragraph
+        color: #f5f5f5
+        font-size: 1.2rem
+        font-weight: 200
+        max-width: 250px
+        z-index: 1
+        text-align: center
+    &__button
+        font-size: 1.2rem
+        width: 130px
+        height: 40px
+        border-radius: 8px
+        color: #f5f5f5
+        background: transparent
+        text-decoration: none
+        border: 1px solid #f5f5f5
+        display: flex
+        justify-content: center
+        z-index: 1
+        align-items: center
+        transition: 1s
+        &:hover
+            transform: scale(1.1)
+            transition: 1s
+            background: #CFCFCF
+            color: #171717
+    &__image
+        position: absolute
+        width: 200px
+        filter: blur(5px)
+
+// SLIDES
+
+.selected
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5rem
+    &__circles
+        border-radius: 50%
+        background: #a2a2a2
+        width: 12px
+        height: 12px
+        opacity: 0.5
+
+.slides
+    position: relative
+    min-height: 100vh
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+    padding: 5rem
+    &__details
+        position: relative
+    &__title
+        color: #f5f5f5
+        max-width: 200px
+        font-size: 1.2rem
+        text-align: center
+        margin-top: 1rem
+    &__span
+        color: #cfcfcf
+        text-align: center
+        max-width: 200px
+        display: block
+        margin-top: 1rem
+        font-size: 1.2rem
+    &__container
+        display: flex
+        justify-content: space-around
+        align-items: center
+    &__paragraph
+        font-size: 3rem
+        color: #a2a2a2
+        text-align: right
+        margin-right: 10rem
+        &> span
+            display: block
+    &__rightarrow
+        position: absolute
+        right: -30px
+        top: 50%
+        transform: translateY(-50%)
+        color: #a2a2a2
+        font-size: 1.3rem
+        opacity: 0.7
+        cursor: pointer
+    &__leftarrow
+        opacity: 0.7
+        font-size: 1.3rem
+        position: absolute
+        left: -30px
+        top: 50%
+        transform: translateY(-50%)
+        color: #a2a2a2
+        cursor: pointer
+    &__image
+        width: 400px
+
+    
+
+// CONTACTS
+
+.contacts
+    position: relative
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__container
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        margin-top: 5rem
+    &__data
+        display: flex
+        flex-direction: column
+        gap: 2rem
+
+    &__title
+        font-size: 3rem
+        color: #f5f5f5
+        display: block
+        text-align: center
+    &__phone
+        &title
+            font-size: 2rem
+            display: block
+            font-weight: 500
+            color: #f5f5f5
+        &number
+            line-height: 2rem
+            display: block
+            font-size: 1.2rem
+            color: #cfcfcf
+    &__email
+        &title
+            font-weight: 500
+            display: block
+            font-size: 2rem
+            color: #f5f5f5
+        &data
+            font-size: 1.2rem
+            line-height: 2rem
+            display: block
+            color: #cfcfcf
+    &__form
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: transparent
+        width: 600px
+        gap: 1rem
+        &> input
+            background: transparent
+            color: #f5f5f5
+            border: none
+            height: 40px
+            width: 100%
+            border-bottom: 1px solid #a2a2a2
+    &__button
+        background: transparent
+        color: #a2a2a2
+        font-size: 2rem
+        border: none
+
+.contact-form
+    width: 90%
+    margin-top: 2rem
+.input-wrapper 
+    position: relative
+    &:focus-within 
+        label 
+            animation: hideLabel 1s ease-out
+            animation-fill-mode: forwards
+        
+.input-field 
+    color: #f5f5f5
+    display: block
+    width: 100%
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid #cfcfcf
+    margin-bottom: 2rem
+    outline: none
+    caret-color: #f5f5f5
+    &:focus 
+        outline: none
+
+.input-field:not(:placeholder-shown)+label 
+    animation: hideLabel 1s ease-out
+    animation-fill-mode: forwards
+
+label 
+    padding: 0 .3rem
+    position: absolute
+    top: .25rem
+    background-color: #171717
+    color: #cfcfcf
+    opacity: 1
+    transform: scaleX(1)
+    transition: all 1s ease-out
+    transform-origin: bottom center
+    animation: showLabel 1s ease-out
+    animation-fill-mode: forwards
+
+#name-label 
+    right: 5%
+
+
+#phone-label 
+    right: 10%
+
+
+#email-label 
+    right: 10%
+
+
+#budget-label 
+    animation: none
+    top: 0
+    position: relative
+
+#budget-output
+    color: #cfcfcc
+
+#message-label 
+    left: 25%
+
+
+.submit-wrapper 
+    width: fit-content
+    margin-top: 3rem
+
+#submit 
+    color: #cfcfcf
+    background-color: transparent
+    border: none
+    font-size: 1.5rem
+                
+input[type=range] 
+    -webkit-appearance: none
+    width: 100%
+    background: transparent
+    &::-webkit-slider-thumb 
+        -webkit-appearance: none
+        height: 1rem
+        width: 2px
+        transform: rotate(30deg) translateY(50%)
+        border-radius: 3px
+        background: #a2a2a2
+output 
+    color: #a2a2a2
+
+
+// BAR
+
+$barbg: #3c3f44
+$baractive: #525ec5
+$barwidth: 100%
+
+.bar
+    display: flex
+    align-items: flex-end
+    &__ui
+        position: relative
+        border-radius: 2rem
+        width: $barwidth
+        height: 10px
+        display: flex
+        background: $baractive
+        align-items: center
+        padding: 0.2rem 0.2rem
+        &--bar
+            height: 5px
+            width: 100%
+            background: $barbg
+            border-radius: 1rem
+            &::-moz-range-thumb
+                cursor: grab
+                background: $barbg
+                width: 10px
+                border-radius: 50%
+                align-self: center
+                height: 10px
+                border: 6px solid $baractive
+            &::-moz-range-progress
+                background: $baractive
+                height: 15px
+                border-radius: 1rem
+
+// RESPONSIVE DESIGN
+
+
+    
+    
+
+@media screen and ( max-width: 1142px  )
+    .package
+        min-height: fit-content
+        margin: 5rem 0rem
+        flex-direction: column
+        gap: 2rem
+    .slides
+        &__paragraph
+            margin-right: 6rem
+        &__container
+            margin-top: 2rem
+
+@media screen and ( max-width: 1000px  )
+    .header
+        &__name
+            font-size: 3rem
+        &__lastname
+            font-size: 4rem
+        &__title
+            font-size: 1.5rem
+    .quote
+        min-height: 100vh
+        justify-content: center
+        &__title
+            word-wrap: break-word
+            font-size: 2rem
+        &__image
+            width: 50%
+    .services
+        min-height: 100vh
+        flex-direction: column-reverse
+        justify-content: center
+        gap: 2rem
+        &__paragraph
+            font-size: 1.8rem
+        &__list
+            font-size: 1.2rem
+    .slides
+        min-height: 100vh
+        justify-content: center
+        gap: 2rem
+        &__paragraph
+            font-size: 2.5rem
+            margin-right: 4rem
+    .package
+        min-height: 100vh
+        justify-content: center
+    .contacts
+        min-height: 100vh
+        justify-content: center
+
+@media screen and ( max-width: 886px  )
+    .header
+        width: fit-content
+        margin-left: auto
+        margin-right: auto
+        flex-direction: column
+        justify-content: center
+        padding: 5rem
+        &__title
+            font-size: 2rem
+        &__name
+            font-size: 4rem
+        &__lastname
+            font-size: 6rem
+
+    .quote
+        padding: 5rem
+        &__title
+        &__image
+            width: 50%
+    .slides
+        &__container
+            margin-top: 2rem
+            flex-direction: column-reverse
+            gap: 2rem
+        &__paragraph
+            font-size: 1.8rem
+            margin-right: auto
+            margin-left: auto
+    .contacts
+        &__container
+            flex-direction: column
+            margin-top: 2rem
+        &__phone
+            &title
+                text-align: center
+            &number
+                text-align: center
+                color: #a2a2a2
+
+        &__email
+            &title
+                text-align: center
+            &data
+                text-align: center
+                color: #a2a2a2
+
+
+
+@keyframes hideLabel 
+    0% 
+        color: #cfcfcf
+        transform: scale(1)
+    50% 
+        color: transparent
+        transform: scaleX(1)
+    100% 
+        color: transparent
+        transform: scaleX(0)
+@keyframes showLabel 
+    0% 
+        color: transparent
+        transform: scaleX(0)
+    50% 
+        color: transparent
+        transform: scaleX(1)
+    100% 
+        color: #cfcfcf
+        transform: scale(1)
+     
+// -----------------------------------------
+    
+
+@media screen and ( max-width: 815px  )
+    .header
+        padding: 2rem
+    .quote
+        padding: 2rem
+        flex-direction: column
+        &__image
+            width: 400px
+    .contacts
+        &__form
+            width: 90%
+    .services
+        &__button
+            margin-top: 0
+
+
+@media screen and ( max-width: 600px  )
+    .header
+        padding: 1rem
+        &__name
+            font-size: 3rem
+        &__lastname
+            font-size: 4rem
+    .quote
+        padding: 1rem
+        flex-direction: column
+        &__image
+            width: 400px
+    .services
+        padding: 0rem 2rem
+        gap: 1rem
+        &__paragraph
+            margin-top: 1rem
+            font-size: 1.5rem
+        &__list
+            font-size: 1.2rem
+    .package
+        padding: 2rem
+        &__title
+            font-size: 2rem
+        &__paragraph
+            font-size: 1.2rem
+            color: #cfcfcf
+    .slides
+        padding: 1rem
+        &__paragraph
+            font-size: 1.6rem
+        &__image
+            width: 100%
+        &__span 
+            color: #cfcfcf
+    .contacts
+        &__title
+            font-size: 2rem
+
+@media screen and ( max-width: 440px  )
+    .header
+        &__title
+            font-size: 1.3rem
+        &__name
+            font-size: 2rem
+        &__lastname
+            font-size: 3rem
+    .package
+        padding: 2rem
+    .card
+        width: 100%
+        &__title
+            text-align: center
+            font-size: 1.4rem
+        &__paragraph
+            font-size: 1.1rem
+    .quote
+        flex-direction: column
+        &__title
+            font-size: 1.8rem
+        &__image
+            width: 400px
+    .slides
+        &__container
+            margin-top: 0
+        &__paragraph
+            font-size: 1.19rem
+    .contacts
+        &__title
+            font-size: 1.7rem
+        &__phonetitle
+            font-size: 1.3rem
+        &__emailtitle
+            font-size: 1.3rem
+        &__phonenumber
+            font-size: 1rem
+        &__emaildata
+            font-size: 1rem
+    .package
+        &__title
+            font-size: 1.6rem
+        &__paragraph
+            font-size: 1.1rem
+
+
+@media screen and ( max-width: 300px  )
+    .header
+        &__name
+            font-size: 1.7rem
+        &__lastname
+            font-size: 2.2rem
+        &__title
+            font-size: 1.2rem
+    .quote
+        &__title
+            font-size: 1.5rem
+        &__image
+            width: 250px
+    .services
+        justify-content: center
+        gap: 1rem
+        &__paragraph
+            font-size: 1.2rem
+        &__image
+            width: 140px
+        &__button
+            margin-top: 0rem
+    .slides
+        &__paragraph
+            font-size: 1.1rem
+    .package
+        &__title
+            font-size: 1.5rem
+        &__paragraph
+            font-size: 1.1rem
+
+@media screen and ( max-height: 500px )
+    .quote, .package, .services, .slides, .contacts
+        height: 700px
+    
+
+// ANIMATIONS
+
+.animate__fadeIn
+    animation: hide-show 2s ease
+
+@keyframes hide-show
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes zoom-out
+    0%
+        transform: scale(4)
+    50%
+        transform: scale(4)
+    100%
+        transform: scale(1)
+
+@keyframes go-in-from-left
+    0%
+        opacity: 0
+        transform: translateX(-100%)
+    40%
+        opacity: 0
+    60%
+        transform: translateX(0)
+    100%
+        opacity: 1
+
+
+@keyframes go-in-from-below
+    0%
+        opacity: 0
+        transform: translateY(100%)
+    40%
+        opacity: 0
+    60%
+        opacity: 1
+        transform: translateY(0)
+
+
+@keyframes go-in-from-above
+    0%
+        opacity: 0
+        transform: translateY(-100%)
+    100%
+        opacity: 1
+        transform: translateY(0%)
+
+@keyframes go-in-from-right
+    0%
+        opacity: 0
+        transform: translateX(100%)
+    100%
+        opacity: 1
+        transform: translateX(0%)
+
