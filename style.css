@@ -301,6 +301,10 @@ body {
   width: 400px;
 }
 
+.hidden-image {
+  display: none;
+}
+
 .contacts {
   position: relative;
   height: 100vh;
